@@ -1,2 +1,3 @@
-# landing-page
-This is a landing page i built using only flexbox (no grids and positioning)
+# Frontend Projects
+
+Link to access websites : https://debonnair3.github.io/frontend/<folder_name>/
