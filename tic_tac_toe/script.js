@@ -155,9 +155,9 @@
                 }
                 board[r][c].mark(ap.token);
                 if(ap.token==1){
-                    cell.innerHTML="<img src=images/1.png>";
+                    cell.innerHTML='<img src="./images/1.png">';
                 }else{
-                    cell.innerHTML="<img src=images/2.png>";
+                    cell.innerHTML='<img src="images/2.png">';
                 }
                 gameboard.displayboard();
                 if(!check(board)){
