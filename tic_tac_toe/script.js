@@ -35,7 +35,26 @@
         let token=2;
         return {name,token};
     })();
+    function evaluation(count1,count2,currplayer){
+        
+        if(count1==2 && count2==0){
+            
+            return currplayer==p2?([100,0.2]):([10,2])
+        }
+        if(count2==2 && count1==0){
+            
 
+           return currplayer==p1?([0.2,100]):([2,10])
+            
+        }
+        if(count1==1 && count2==0){
+            return [1,0.7];
+        }
+        if(count1==0 && count2==1){
+            return [0.7,1];
+        }
+        return [0,0];
+    }
     let gamecontroller=(function(){
         gameboard.displayboard(); // initial board display;
         let board=gameboard.getboard(); 
@@ -47,7 +66,7 @@
         const player1=document.querySelector('.p1');
         const player2=document.querySelector('.p2');
         
-        let check=function(board){
+        let check=function(board,curr){
             let flag=0;
             let prob1=0,prob2=0;
             for(let i=0;i<3;i++){
@@ -78,18 +97,13 @@
                     player1.style.height='0%';
                     return false;
                 }
-                const p11=[c11,c12];
-                const p21=[c21,c22];
-                for(let val of p11){
-                    if(val==2){
-                        prob1++;
-                    }
-                }
-                for(let val of p21){
-                    if(val==2){
-                        prob2++;
-                    }
-                }
+                let [a,b]=evaluation(c11,c21,curr);
+                
+                prob1+=a;prob2+=b;
+                [a,b]=evaluation(c12,c22,curr);
+                
+                prob1+=a;prob2+=b;
+                
 
             }
             let d11=0,d12=0,d21=0,d22=0;
@@ -114,20 +128,14 @@
                 player1.style.height='0%';
                 return false;
             }
-           
+            let [a,b]=evaluation(d11,d21,curr);
+            a/=8;b/=8;
+            prob1+=a;prob2+=b;
+            [a,b]=evaluation(d12,d22,curr);
+            a/=8;b/=8;
+            prob1+=a;prob2+=b;
             
-            const p11=[d11,d12]
-            const p21=[d21,d22]
-            for(let val of p11){
-                if(val==2){
-                    prob1++;
-                }
-            }
-            for(let val of p21){
-                if(val==2){
-                    prob2++;
-                }
-            }
+            console.log(prob1,prob2);
             const probability=prob1/(prob1+prob2);
             player1.style.height=`${100*probability}%`;
             player2.style.height=`${100*(1-probability)}%`;
@@ -155,12 +163,12 @@
                 }
                 board[r][c].mark(ap.token);
                 if(ap.token==1){
-                    cell.innerHTML='<img src="./images/1.png">';
+                    cell.innerHTML="<img src=./images1/1.png>";
                 }else{
-                    cell.innerHTML='<img src="./images/2.png">';
+                    cell.innerHTML="<img src=./images1/2.png>";
                 }
                 gameboard.displayboard();
-                if(!check(board)){
+                if(!check(board,ap)){
                     gameover=true;
                     return;
                 }
