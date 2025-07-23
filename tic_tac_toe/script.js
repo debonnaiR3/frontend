@@ -39,12 +39,12 @@
         
         if(count1==2 && count2==0){
             
-            return currplayer==p2?([100,0.2]):([10,2]);
+            return currplayer==p2?([100,0.2]):([10,2])
         }
         if(count2==2 && count1==0){
             
 
-           return currplayer==p1?([0.2,100]):([2,10]);
+           return currplayer==p1?([0.2,100]):([2,10])
             
         }
         if(count1==1 && count2==0){
