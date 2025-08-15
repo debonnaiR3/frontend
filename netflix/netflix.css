@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+}
+body {
+  background-color: black;
+}
+.main {
+  height: 95.5vh;
+  background-image: url("img.jpg");
+  background-size: max(100vw, 1600px);
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.main .box {
+  background-color: black;
+  height: 95.5vh;
+  width: 100%;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+}
+
+.main nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  max-width: 75vw;
+  padding-top: 20px;
+}
+.main nav img {
+  position: relative;
+  z-index: 10;
+}
+.main nav button {
+  position: relative;
+  z-index: 10;
+}
+.belowbox {
+  color: white;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.belowbox > :first-child {
+  font-family: "Martel Sans", sans-serif;
+
+  font-style: normal;
+  font-size: 48px;
+  font-weight: 900;
+  text-align: center;
+}
+.belowbox > :nth-child(2) {
+  font-family: "Martel Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+
+  margin-top: -7px;
+  text-align: center;
+}
+.belowbox > :nth-child(3) {
+  font-family: "Martel Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  font-size: 20px;
+  margin-top: 23px;
+  text-align: center;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 20;
+}
+.topbutton {
+  display: flex;
+}
+.bt1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  border: solid rgba(237, 236, 236, 0.35);
+  background: none;
+  color: white;
+  border-radius: 4px;
+  border-width: 0.1px;
+  padding: 3px;
+}
+.bt1 img {
+  margin-top: 3px;
+}
+
+.bt2 {
+  margin-left: 23px;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 13px;
+}
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input input {
+  font-size: 16px;
+  font-weight: 400;
+  background: transparent;
+  border: solid rgba(237, 236, 236, 0.35);
+  line-height: 1.5;
+  border-radius: 4px;
+  border-width: 0.1px;
+
+  padding: 10px 130px 10px 10px;
+}
+.bt3 {
+  padding: 6.47px 25px 6.47px 15px;
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 6px;
+}
+.input input::placeholder {
+  color: rgba(255, 255, 255, 0.619);
+}
+.hover {
+  cursor: pointer;
+}
+.main2 {
+  background-size: max(100vw, 1600px);
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+}
+.main2 .box2 {
+  background-color: rgb(47, 47, 47);
+  height: 1vh;
+  width: 100%;
+}
+
+.main2 .text1 {
+  color: white;
+
+  margin-top: 80px;
+}
+.text1 span{
+  display: inline-block;
+}
+.main2 .content1 {
+  display: flex;
+  justify-content: center;
+  color: white;
+  max-width: 85vw;
+  margin: auto;
+  align-items: center;
+}
+.text1 > span {
+  font-size: 48px;
+  font-weight: 900;
+  display: block;
+
+}
+.text1 > :nth-child(2) {
+  font-size: 24px;
+  font-weight: 400;
+}
+.main3{
+  background-size: max(100vw, 1600px);
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+}
+.main3 .box3 {
+  background-color: rgb(47, 47, 47);
+  height: 1vh;
+  width: 100%;
+  margin-top: 84px;
+}
+.main3 .text2 {
+  color: white;
+
+  margin-top: 80px;
+}
+.text2 span{
+  display: inline-block;
+}
+
+.main3 .content2{
+  display: flex;
+  justify-content: center;
+  color: white;
+  max-width: 85vw;
+  margin: auto;
+  align-items: center;
+  padding: 59px 30px;
+}
+.text2 > span {
+  font-size: 48px;
+  font-weight: 900;
+  display: block;
+
+}
+.text2 > :nth-child(2) {
+  font-size: 24px;
+  font-weight: 400;
+}
+.main4{
+  background-size: max(100vw, 1600px);
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+}
+.main4 .box4 {
+  background-color: rgb(47, 47, 47);
+  height: 1vh;
+  width: 100%;
+  margin-top: 84px;
+}
+.main4 .text3 {
+  color: white;
+  
+  margin-top: 80px;
+}
+.text3 span{
+  display: inline-block;
+}
+
+.main4 .content3{
+  display: flex;
+  justify-content: center;
+  color: white;
+  max-width: 85vw;
+  margin: auto;
+  align-items: center;
+  padding: 59px 180px;
+  
+}
+.text3 > span {
+  font-size: 48px;
+  font-weight: 900;
+  display: block;
+
+}
+.text3 > :nth-child(2) {
+  font-size: 24px;
+  font-weight: 400;
+}
